@@ -42,4 +42,47 @@ body {
   -ms-overflow-style: none;
 }
 
+.partner-box {
+  position: relative;
+  min-width: 260px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(5, 7, 15, 0.65);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(245, 179, 1, 0.65);
+  border-radius: 14px;
+
+  color: #d7d7d7;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* TOP BORDER CUT */
+.partner-box::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 32px;
+  right: 32px;
+  height: 2px;
+  background: #070a12;
+}
+
+/* LEFT + RIGHT TOP DOTS */
+.partner-box::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 6px;
+  height: 6px;
+  background: #f5b301;
+  border-radius: 50%;
+  box-shadow: calc(100% - 24px) 0 #f5b301;
+}
+
 
