@@ -1,6 +1,5 @@
 import { HashRouter } from "react-router-dom";
 import Navbar from "./components/Navbar";
-
 import Cursor from "./components/Cursor";
 
 import Home from "./pages/Home";
@@ -8,6 +7,7 @@ import About from "./pages/About";
 import Tokenomics from "./pages/Tokenomics";
 import Roadmap from "./pages/Roadmap";
 import FAQ from "./pages/FAQ";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -40,7 +40,10 @@ export default function App() {
           <FAQ />
         </section>
 
-        
+        {/* ✅ FOOTER AS LAST SECTION */}
+        <section id="footer" className="snap-start">
+          <Footer />
+        </section>
       </main>
     </HashRouter>
   );

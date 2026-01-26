@@ -9,7 +9,7 @@ export default function Home() {
       <section className="min-h-screen pt-12 flex items-center relative overflow-hidden">
         <FloatingIcons />
 
-        {/* FULL WIDTH CONTAINER – NO LEFT MARGIN */}
+        {/* FULL WIDTH CONTAINER */}
         <div className="w-full grid md:grid-cols-2 items-center">
 
           {/* LEFT CONTENT */}
@@ -29,9 +29,10 @@ export default function Home() {
             </h1>
 
             <p className="mt-6 text-textMuted max-w-xl">
-              Alieus Coin (AHF2) isn’t just a digital currency — it’s the world’s first hedge fund–backed cryptocurrency designed for real-world use. From AI agents and real estate to metaverse access and global payments, AHF2 powers a complete ecosystem built for the future.
-
-
+              Alieus Coin (AHF2) isn’t just a digital currency — it’s the world’s
+              first hedge fund–backed cryptocurrency designed for real-world
+              use. From AI agents and real estate to metaverse access and global
+              payments, AHF2 powers a complete ecosystem built for the future.
             </p>
 
             <div className="mt-10 flex gap-4">
@@ -44,16 +45,23 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* RIGHT VISUAL */}
+          {/* RIGHT VISUAL – IMAGE */}
           <motion.div
-            className="relative flex justify-center"
+            className="relative flex justify-center items-center"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <div className="absolute w-[420px] h-[420px] bg-gold/20 blur-3xl rounded-full"></div>
-            <div className="w-64 h-64 rounded-full bg-gradient-to-br from-gold to-goldSoft z-10"></div>
+            {/* glow */}
+            <div className="absolute w-[520px] h-[520px] bg-gold/20 blur-3xl rounded-full"></div>
+
+            {/* image */}
+            <img
+              src="https://www.alieuscoin.com/assets/images/hero.webp"
+              alt="AHF Ecosystem"
+              className="relative z-10 w-[380px] md:w-[450px] lg:w-[520px] animate-float"
+            />
           </motion.div>
 
         </div>
